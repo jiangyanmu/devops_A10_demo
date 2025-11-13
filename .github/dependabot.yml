@@ -4,11 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    allow:
-      - dependency-type: "direct"
-    commit-message:
-      prefix: "[deps]"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     labels:
       - "dependencies"
-      - "automerge"
+      - "dependabot"
+    ignore:
+      - dependency-name: "django"
+        versions: ["<3.0.0"]
